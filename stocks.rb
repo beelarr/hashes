@@ -8,7 +8,7 @@ stock_dict = {
 purchases = [
     ['APL', 100, '3-oct-2017', 48],
     ['GOOGL', 100, '3-oct-2017', 330],
-    ['FB', 100, '3-oct-2017', 432]
+    ['APL', 100, '3-oct-2017', 432]
 ]
 
 apple = purchases.fetch(0)
@@ -32,4 +32,6 @@ if stock_dict.has_key?(facebook[0])
   p facebook[1] * facebook[3]
 end
 
-for purchase
+for purchase in purchases
+  p "Purchased #{purchase[0]} stock totalling #{purchase[1] * purchase[3]}"
+end
