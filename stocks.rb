@@ -16,20 +16,11 @@ google = purchases.fetch(1)
 facebook = purchases.fetch(2)
 
 p google
-
-if stock_dict.has_key?(apple[0])
-  p stock_dict.fetch(apple[0])
-  p apple[1] * apple[3]
-end
-
-if stock_dict.has_key?(google[0])
-  p stock_dict.fetch(google[0])
-  p google[1] * google[3]
-end
-
-if stock_dict.has_key?(facebook[0])
-  p stock_dict.fetch(facebook[0])
-  p facebook[1] * facebook[3]
+for purchase in purchases
+  if stock_dict.has_key?(purchase[0])
+    p stock_dict.fetch(purchase[0])
+    p purchase[1] * purchase[3]
+  end
 end
 
 for purchase in purchases
